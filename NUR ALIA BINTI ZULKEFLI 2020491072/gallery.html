@@ -1,0 +1,100 @@
+<html>
+<head>
+<link href="assest/css/style.css" rel="stylesheet">
+<title> Gallery </title>
+</head>
+<body>
+
+<center>
+<br><br>
+<div class="row">
+  <div class="side">
+  <h1>GALLERY</h1>
+</div>
+<pre>
+Happy times come and go, but the memories stay forever.
+</pre>
+</div>
+
+<br><br><br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class>1 / 5</div>
+ <center> <img src="assest/image/img1.jpg" style="width:70%;height:70%px"> </center>
+</div>
+
+<div class="mySlides fade">
+  <div class>2 / 5</div>
+  <center> <img src="assest/image/img2.jpg" style="width:70%;height:70%px"> </center>
+</div>
+
+<div class="mySlides fade">
+  <div class>3 / 5</div>
+  <center> <img src="assest/image/img3.jpg" style="width:70%;height:70%px"> </center>
+</div>
+
+
+<div class="mySlides fade">
+  <div class>4 / 5</div>
+  <center> <img src="assest/image/img4.jpg" style="width:70%;height:70%px"> </center>
+</div>
+
+
+<div class="mySlides fade">
+  <div class>5 / 5</div>
+  <center> <img src="assest/image/img5.jpg" style="width:70%;height:70%px"> </center>
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<audio controls loop>
+<source src="assest/audio/music1.mp3" type="audio/mp3">
+</audio>
+
+
+</body>
+</html>

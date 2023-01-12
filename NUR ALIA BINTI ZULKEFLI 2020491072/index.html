@@ -1,0 +1,81 @@
+<html>
+<head>
+<link href="assest/css/style.css" rel="stylesheet">
+<title> HomePage </title>
+</head>
+<body>
+
+<br><br><br>
+
+<div class="header">
+  <h1>NUR_ALIA_ZULKEFLI</h1>
+  <pre> It's never too late to focus on your dreams </pre>
+</div>
+
+<marquee direction="right"><b><i>WELCOME TO MY WEBSITE</i></b> </marquee>
+
+
+<div class="navbar">
+  <a href="index.html" class="active">Home</a>
+  <a href="biodata.html" target="_blank">Biodata</a>
+  <a href="experience.html" target="_blank">Experience</a>
+  <a href="education.html" target="_blank">Education</a>
+  <a href="family.html" target="_blank">Family</a>
+  <a href="gallery.html" target="_blank">Gallery</a>
+  <a href="https://www.facebook.com/nuralieya.alieya.3?mibextid=ZbWKwL" target="_blank" class="right"> <img src="assest/image/facebook.jpg" width="30px"> </a>
+  <a href="https://instagram.com/nraliaz_?igshid=YWJhMjlhZTc=" target="_blank" class="right"> <img src="assest/image/instagram.png" width="30px"> </a>
+</div>
+
+<video controls width="100%" loop="loop" muted>
+<source src="assest/video/vid2.mp4" type="video/mp4">
+</video>
+
+<div class="footer">
+  <h6>Thank You For Visit</h6>
+
+<audio controls>
+<source src="assest/audio/music2.mp3" type="audio/mp3">
+</audio>
+
+<center>
+<div id="clock">8:10:45</div>
+ 
+    <script src="clock2.js"></script>
+ 
+ 
+    <script>
+        setInterval(showTime, 1000);
+        function showTime() {
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            am_pm = "AM";
+ 
+            if (hour > 12) {
+                hour -= 12;
+                am_pm = "PM";
+            }
+            if (hour == 0) {
+                hr = 12;
+                am_pm = "AM";
+            }
+ 
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+ 
+            let currentTime = hour + ":"
+                + min + ":" + sec + am_pm;
+ 
+            document.getElementById("clock")
+                .innerHTML = currentTime;
+        }
+ 
+        showTime();
+    </script>
+
+</div>
+</center>
+</body>
+</html>
